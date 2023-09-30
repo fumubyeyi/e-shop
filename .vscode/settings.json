@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+}

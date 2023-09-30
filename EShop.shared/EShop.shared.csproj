@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EShop.logic\EShop.logic.csproj" />
+  </ItemGroup>
+
 </Project>
