@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using EShop.client;
-using EShop.client.Services;
+using EShop.maui.Services;
 using EShop.shared.Pages.WeatherData;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
