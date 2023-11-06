@@ -3,10 +3,10 @@ using EShop.shared.Models;
 using EShop.shared.Interfaces;
 namespace EShop.maui.Services;
 
-public class WeatherForecastService: IWeatherForecastService
+public class WeatherForecastServiceMaui: IWeatherForecastService
 {
 	private readonly HttpClient http;
-	public WeatherForecastService(HttpClient http)
+	public WeatherForecastServiceMaui(HttpClient http)
 	{
 		this.http = http;
 	}

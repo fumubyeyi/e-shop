@@ -17,12 +17,13 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddMauiBlazorWebView();
+        builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5086") });
+        builder.Services.AddSingleton<IWeatherForecastService, WeatherForecastServiceMaui>();
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
-		builder.Services.AddHttpClient<IWeatherForecastService, WeatherForecastService>();
-		return builder.Build();
+        return builder.Build();
 	}
 }

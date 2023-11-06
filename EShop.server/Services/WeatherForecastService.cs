@@ -1,5 +1,4 @@
 using System;
-using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -12,17 +11,20 @@ namespace EShop.server.Services
 {
     public class WeatherForecastService : IWeatherForecastService
     {        
-        private readonly HttpClient http;
-       private readonly NavigationManager navManager;
-        public WeatherForecastService(HttpClient http)
+        private static string[] Summaries = new[]
         {
-            this.http = http;
-            this.navManager = navManager;
-        }
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
         public async Task<WeatherForecast[]> GetWeatherForecastAsync()
         {
-            http.BaseAddress = new Uri(navManager.BaseUri);
-            return await http.GetFromJsonAsync("_content/EShop.shared/sample-data/weather.json");
+
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            }).ToArray();
         }
     }
 }
