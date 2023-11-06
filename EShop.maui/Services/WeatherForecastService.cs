@@ -1,5 +1,6 @@
-using EShop.logic.Models;
-using EShop.shared.Pages.WeatherData;
+using System.Net.Http.Json;
+using EShop.shared.Models;
+using EShop.shared.Interfaces;
 namespace EShop.maui.Services;
 
 public class WeatherForecastService: IWeatherForecastService

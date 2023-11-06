@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EShop.logic.Models
+namespace EShop.shared.Models
 {
     public class WeatherForecast
     {

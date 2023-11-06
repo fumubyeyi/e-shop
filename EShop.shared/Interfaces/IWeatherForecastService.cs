@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EShop.logic.Models;
+using EShop.shared.Models;
 
-namespace EShop.shared.Pages.WeatherData
+namespace EShop.shared.Interfaces
 {
     public interface IWeatherForecastService
     {

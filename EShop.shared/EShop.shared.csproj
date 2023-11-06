@@ -13,10 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EShop.logic\EShop.logic.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.4" />
   </ItemGroup>
 
 </Project>

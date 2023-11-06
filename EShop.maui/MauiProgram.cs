@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using EShop.maui.Services;
-using EShop.shared.Pages.WeatherData;
+using EShop.shared.Interfaces;
 
 namespace EShop.maui;
 
@@ -22,7 +22,7 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
-		builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+		builder.Services.AddHttpClient<IWeatherForecastService, WeatherForecastService>();
 		return builder.Build();
 	}
 }
