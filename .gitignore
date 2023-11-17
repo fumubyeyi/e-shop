@@ -400,3 +400,4 @@ FodyWeavers.xsd
 
 # Files that may contain app's sensitive data
 *.json
+.vscode/settings.json

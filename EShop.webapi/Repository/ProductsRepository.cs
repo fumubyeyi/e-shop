@@ -18,6 +18,7 @@ namespace EShop.webapi.Repository
         }
 
         public async Task<Product[]> GetProductsAsync(){
+        
             return await _eshopContext.Products.ToArrayAsync();
         }
 

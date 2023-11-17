@@ -4,4 +4,6 @@
         "comments": "on",
         "strings": "on"
     },
+    "appService.defaultWebAppToDeploy": "/subscriptions/420b0e44-7de3-4f9d-977f-50d3ec54601a/resourceGroups/francoiseumubyeyiehopapi_group/providers/Microsoft.Web/sites/francoiseumubyeyiehopapi",
+    "appService.deploySubpath": "EShop.webapi/publish",
 }

@@ -13,16 +13,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 string connection = String.Empty;
-if (builder.Environment.IsDevelopment()){
+if (builder.Environment.IsDevelopment())
     builder.Configuration.AddEnvironmentVariables();
-    connection = builder.Configuration.GetConnectionString("AzureSQLConnection");
-}
-else{
-    connection = Environment.GetEnvironmentVariable("AzureSQLConnection");
-}
+
+connection = builder.Configuration.GetConnectionString("AzureSQLConnection");
+
 builder.Services.AddDbContext<EshopContext>(options =>
     options.UseSqlServer(connection));
 builder.Services.AddScoped<IProductsService, ProductsRepository>();
+builder.Services.AddScoped<IWeatherForecastService, WeatherForecastRepository>();
+
 
 var app = builder.Build();
 
@@ -36,7 +36,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-app.MapControllers();
+app.UseRouting();
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 app.Run();

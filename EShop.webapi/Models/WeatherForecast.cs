@@ -1,4 +1,4 @@
-namespace EShop.webapi;
+namespace EShop.webapi.Models;
 
 public class WeatherForecast
 {
